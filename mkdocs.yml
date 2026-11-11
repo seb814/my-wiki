@@ -1,0 +1,70 @@
+site_name: My Learning Wiki
+site_description: Hands-on notes and tutorials, written in Markdown.
+site_url: https://YOUR-USERNAME.github.io/YOUR-REPO/
+repo_url: https://github.com/YOUR-USERNAME/YOUR-REPO
+repo_name: YOUR-USERNAME/YOUR-REPO
+
+theme:
+  name: material
+  icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - content.action.edit
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - 00. Fundamentals: 00-fundamentals.md
+  - 01. Workflow: 01-workflow.md
+  - Cheatsheet: cheatsheet.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOUR-USERNAME
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/YOUR-HANDLE
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@YOUR-CHANNEL
